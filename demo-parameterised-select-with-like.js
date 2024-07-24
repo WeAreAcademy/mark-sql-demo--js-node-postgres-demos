@@ -6,6 +6,7 @@ async function doDemo() {
 
   const searchTerm = "ing";
 
+  //note: there's also ilike for case-insensitive search (postgres-specific)
   const text = "select * from words where word like $1";
   const values = [`%${searchTerm}%`];
 
